@@ -16,7 +16,7 @@
 
 ## class diagram
 
-![classDiagram](/Users/xujiaqi/technology/java/project/design-patterns/info/pattern/classDiagram.jpg)
+![classDiagram](classDiagram.jpg)
 
 
 
