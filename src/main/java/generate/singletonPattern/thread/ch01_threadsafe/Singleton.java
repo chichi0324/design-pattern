@@ -25,4 +25,4 @@ public class Singleton {
     unneeded overhead after the first time through.
 */
 // 缺點：只有第一次產生實體會需要同步化，但如果每次都同步化可能造成執行效率下降100倍，如果
-// getInstance()放在頻繁運作的地方，可能要重新考慮了
+// getInstance()放在頻繁運作的地方，可能要重新考慮了.
