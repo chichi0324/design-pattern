@@ -1,6 +1,6 @@
-package behavior.observerPattern.youtube.subject;
+package behavior.observerPattern.news.subject;
 
-import behavior.observerPattern.youtube.observer.Observer;
+import behavior.observerPattern.news.observer.Observer;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package behavior.observerPattern.youtube.observer;
+package behavior.observerPattern.news.observer;
 
-import behavior.observerPattern.youtube.subject.Observable;
+import behavior.observerPattern.news.subject.Observable;
 
 /**
  * 觀察者(Observer/Listener)

@@ -1,7 +1,7 @@
-package behavior.observerPattern.youtube.observer;
+package behavior.observerPattern.news.observer;
 
-import behavior.observerPattern.youtube.subject.News;
-import behavior.observerPattern.youtube.subject.Observable;
+import behavior.observerPattern.news.subject.News;
+import behavior.observerPattern.news.subject.Observable;
 
 /**
  * Reader實作Observer介面，為觀察者

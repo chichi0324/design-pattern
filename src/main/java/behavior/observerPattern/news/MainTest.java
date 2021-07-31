@@ -1,9 +1,9 @@
-package behavior.observerPattern.youtube;
+package behavior.observerPattern.news;
 
-import behavior.observerPattern.youtube.observer.Reader;
-import behavior.observerPattern.youtube.subject.News;
+import behavior.observerPattern.news.observer.Reader;
+import behavior.observerPattern.news.subject.News;
 
-public class YoutubeTest {
+public class MainTest {
 
     public static void main(String[] args) {
 
