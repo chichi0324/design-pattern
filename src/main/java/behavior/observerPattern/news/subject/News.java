@@ -3,7 +3,7 @@ package behavior.observerPattern.news.subject;
 import behavior.observerPattern.news.observer.Observer;
 
 import java.util.ArrayList;
-
+ 
 /**
  * News實作Observable介面，為被觀察對象：
  *
