@@ -1,6 +1,6 @@
 package generate.singletonPattern.thread.ch03_doublecheckedlocking;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Single;
+import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader;
 
 /**
  * 改善多執行緒
@@ -19,7 +19,7 @@ public class Singleton {
     // 檢查實體，如果不存在，就進入同步化區塊
     if (uniqueInstance == null) {
       // 注意，只有第一次才執行這裡的程式碼
-      synchronized (Single.class) {
+      synchronized (XsiNilLoader.Single.class) {
         // 進入區塊後，再檢查一次，如果仍是null，才建立實體
         if (uniqueInstance == null) {
           uniqueInstance = new Singleton();
