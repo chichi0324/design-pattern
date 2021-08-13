@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
  * 抽像工廠模式-測試
  */
 public class EquipFactoryTest {
-    private EquipFactory equipFactory;
+//    private EquipFactory archerEquipFactory;
     @Test
     /**
      * 測試工廠是否能正確生產裝備
@@ -25,9 +25,9 @@ public class EquipFactoryTest {
         System.out.println("==========抽像工廠模式測試==========");
 
         // 幫弓箭手生產裝備
-        equipFactory = new ArcherEquipFactory();
-        Clothes archerLeather = equipFactory.productArmor();
-        Weapon archerBow = equipFactory.productWeapon();
+        EquipFactory archerEquipFactory = new ArcherEquipFactory();
+        Clothes archerLeather = archerEquipFactory.productArmor();
+        Weapon archerBow = archerEquipFactory.productWeapon();
 
         // 皮甲的防禦應該是5，弓的攻擊為10，範圍為10
         Assert.assertEquals(5, archerLeather.getDef());
@@ -36,9 +36,9 @@ public class EquipFactoryTest {
 
 
         // 幫鬥士生產裝備
-        equipFactory = new WarriorEquipFactory();
-        Clothes armor = equipFactory.productArmor();
-        Weapon longSword = equipFactory.productWeapon();
+        EquipFactory warriorEquipFactory = new WarriorEquipFactory();
+        Clothes armor = warriorEquipFactory.productArmor();
+        Weapon longSword = warriorEquipFactory.productWeapon();
 
         // 盔甲的防禦應該是10，弓的攻擊為10，範圍為1
         Assert.assertEquals(10, armor.getDef());
@@ -49,12 +49,12 @@ public class EquipFactoryTest {
         // 弓箭手訓練營
         TrainingCamp camp = new ArcherTrainingCamp();
         // 訓練弓箭手
-        Adventurer archer = camp.trainAdventurer();
+        Adventurer archer = camp.trainAdventurer(archerEquipFactory);
 
         // 鬥士訓練營
         camp = new WarriorTrainingCamp();
         // 訓練鬥士
-        Adventurer warrior = camp.trainAdventurer();
+        Adventurer warrior = camp.trainAdventurer(warriorEquipFactory);
 
         archer.display();
         warrior.display();

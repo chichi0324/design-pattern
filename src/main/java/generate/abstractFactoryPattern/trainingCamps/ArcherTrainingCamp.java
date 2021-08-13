@@ -9,10 +9,10 @@ import generate.abstractFactoryPattern.equipFactory.EquipFactory;
  * 實體工廠-弓箭手訓練營
  */
 public class ArcherTrainingCamp implements TrainingCamp {
-    private static EquipFactory factory = new ArcherEquipFactory();
+//    private static EquipFactory factory = new ArcherEquipFactory();
 
     @Override
-    public Adventurer trainAdventurer() {
+    public Adventurer trainAdventurer(EquipFactory factory) {
         System.out.println("訓練一個弓箭手");
         Archer archer = new Archer();
         // ...進行基本訓練
